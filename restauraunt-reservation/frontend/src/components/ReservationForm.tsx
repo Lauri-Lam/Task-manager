@@ -39,7 +39,7 @@ const ReservationForm = ({ onAdd }: ReservationFormProps) => {
                     required
                     type="text"
                     style={{ maxWidth: "300px" }}
-                    className="mb-2"
+                    className="mb-2 form-control"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     />
@@ -50,7 +50,7 @@ const ReservationForm = ({ onAdd }: ReservationFormProps) => {
                     required
                     type="email"
                     style={{ maxWidth: "300px" }}
-                    className="mb-2"
+                    className="mb-2 form-control"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     />
@@ -61,7 +61,7 @@ const ReservationForm = ({ onAdd }: ReservationFormProps) => {
                     required
                     type="date"
                     style={{ maxWidth: "300px" }}
-                    className="mb-2"
+                    className="mb-2 form-control"
                     value={date}
                     onChange={(e) => setDate(e.target.value)}
                     />
@@ -72,7 +72,7 @@ const ReservationForm = ({ onAdd }: ReservationFormProps) => {
                     required
                     type="time"
                     style={{ maxWidth: "300px" }}
-                    className="mb-2"
+                    className="mb-2 form-control"
                     value={time}
                     onChange={(e) => setTime(e.target.value)}
                     />
@@ -84,12 +84,14 @@ const ReservationForm = ({ onAdd }: ReservationFormProps) => {
                     min={1}
                     type="number"
                     style={{ maxWidth: "300px" }}
-                    className="mb-2"
+                    className="mb-2 form-control"
                     value={partySize}
                     onChange={(e) => setPartySize(Number(e.target.value))}
                     />
             </label>
-            <button className="btn btn-primary" type="submit">Reserve</button>
+            <div className="d-flex justify-content-center">
+                <button className="btn btn-primary mb-3" type="submit">Reserve</button>
+            </div>
         </form>
     );
 };
