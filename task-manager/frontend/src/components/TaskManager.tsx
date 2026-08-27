@@ -252,7 +252,7 @@ export default function TaskManager() {
                     {loading && <p className="text-secondary">Loading tasks...</p>}
                     <div className="d-flex gap-2 mb-4">
                         <ClearCompletedButton onClearCompleted={handleClearCompleted} />
-                        <TaskFilter onFilterChange={setFilter} />
+                        <TaskFilter onFilterChange={setFilter} filter={filter}/>
                     </div>
                     <ul className="list-group mb-4">
                         {filteredTasks.map(task => (
