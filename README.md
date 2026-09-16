@@ -4,6 +4,8 @@
 
 A full-stack task management application with CRUD functionality, a REST API, and persistent PostgreSQL storage.
 
+![Task Manager screenshot](docs/task-manager.png)
+
 ## Features
 
 - Create tasks with a title, optional description, and priority
