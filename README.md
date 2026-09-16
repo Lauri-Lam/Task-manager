@@ -1,9 +1,111 @@
-My React, Typescript, Node.js, Express, PostgreSQL, Bootstrap projects!
+# Task Manager
 
+## Installation
 
-# 💻 Tech Stack:
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
-![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
-![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+Before running the application, make sure you have the following installed:
+
+- Node.js
+- npm
+- PostgreSQL
+
+### Frontend
+
+The frontend is built with:
+
+- React
+- TypeScript
+- Vite
+- Bootstrap
+
+Navigate to the frontend folder:
+
+````bash
+cd frontend
+
+Install the dependencies:
+
+```bash
+npm install
+
+Start the frontend development server:
+
+```bash
+npm run dev
+
+### Backend
+
+The backend uses:
+
+- Node.js
+- Express
+- TypeScript
+- PostgreSQL
+- pg for PostgreSQL connections and connection pooling
+- CORS
+- dotenv
+
+Navigate to the backend folder:
+
+```bash
+cd backend
+
+Install the dependencies:
+
+```bash
+npm install
+
+If installing the backend packages manually:
+
+```bash
+npm install express pg cors dotenv
+
+Install the TypeScript development dependencies:
+
+```bash
+npm install -D typescript tsx @types/node @types/express @types/cors
+
+### Environment Variables
+
+Create a .env file inside the backend folder.
+
+Example:
+DB_HOST=localhost
+DB_PORT=5432
+DB_USER=postgres
+DB_PASSWORD=your_password
+DB_NAME=task_manager
+PORT=3000
+
+Use .env.example as a template. It is included in the project.
+
+### PostgreSQL Database
+
+Make sure PostgreSQL is running and create the database used by the application.
+
+For example:
+
+```SQL
+CREATE DATABASE task_manager;
+
+Then run the SQL from:
+
+backend/schema.sql
+
+to create the required tables.
+
+### Running the Application
+
+Run the backend in one terminal:
+
+```bash
+cd backend
+npm run dev
+
+Run the frontend in another terminal:
+
+```bash
+cd backend
+npm run dev
+
+The frontend and backend must both be running for the application to work.
+````
