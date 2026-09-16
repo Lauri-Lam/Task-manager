@@ -93,7 +93,7 @@ Install the dependencies:
 npm ci
 ```
 
-If installing the backend packages manually:
+If you need to reinstall the backend packages manually:
 
 ```bash
 npm install express pg cors dotenv
@@ -155,6 +155,74 @@ npm run dev
 ```
 
 The frontend and backend must both be running for the application to work.
+
+## API Endpoints
+
+```ts
+GET    /tasks
+POST   /tasks
+PATCH  /tasks/:id
+DELETE /tasks/:id
+DELETE /tasks/completed
+```
+
+## Project Structure
+
+<!-- 
++ Task-manager/
+  + frontend/
+    + src/
+      + api/
+        + tasks.ts
+      + components/
+        + AddTaskForm.tsx
+        + ClearCompletedButton.tsx
+        + TaskFilter.tsx
+        + TaskItem.tsx
+        + TaskManager.tsx
+      + types/
+        + task.ts
+      + App.tsx
+      + main.tsx
+    + index.html
+  + backend/
+    + src/
+      + db.ts
+      + server.ts
+    + schema.sql
+    + .env.example
+  + shared/
+    + task.ts
+  + README.md
+-->
+
+```text
+Task-manager/
+├── frontend/
+│   ├── src/
+│   │   ├── api/
+│   │   │   └── tasks.ts
+│   │   ├── components/
+│   │   │   ├── AddTaskForm.tsx
+│   │   │   ├── ClearCompletedButton.tsx
+│   │   │   ├── TaskFilter.tsx
+│   │   │   ├── TaskItem.tsx
+│   │   │   └── TaskManager.tsx
+│   │   ├── types/
+│   │   │   └── task.ts
+│   │   ├── App.tsx
+│   │   └── main.tsx
+│   └── index.html
+├── backend/
+│   ├── src/
+│   │   ├── db.ts
+│   │   └── server.ts
+│   ├── schema.sql
+│   └── .env.example
+├── shared/
+│   └── task.ts
+└── README.md
+```
 
 ## Updates
 
