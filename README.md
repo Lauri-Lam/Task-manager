@@ -102,7 +102,7 @@ npm install express pg cors dotenv
 Install the TypeScript development dependencies:
 
 ```bash
-npm install -D typescript tsx @types/node @types/express @types/cors
+npm install -D typescript tsx @types/node @types/express @types/cors @types/pg
 ```
 
 ## Environment Variables
