@@ -106,6 +106,7 @@ npm install -D typescript tsx @types/node @types/express @types/cors
 Create a `.env` file inside the backend folder.
 
 Example:
+
 ```env
 DB_HOST=localhost
 DB_PORT=5432
