@@ -60,7 +60,7 @@ cd frontend
 Install the dependencies:
 
 ```bash
-npm install
+npm ci
 ```
 
 Start the frontend development server:
@@ -90,7 +90,7 @@ cd backend
 Install the dependencies:
 
 ```bash
-npm install
+npm ci
 ```
 
 If installing the backend packages manually:
