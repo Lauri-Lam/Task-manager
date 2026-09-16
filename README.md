@@ -2,7 +2,7 @@
 
 ## Description
 
-A task manager application with CRUD functionality, REST API and PostgreSQL database.
+A full-stack task management application with CRUD functionality, a REST API, and persistent PostgreSQL storage.
 
 ## Features
 
@@ -13,6 +13,7 @@ A task manager application with CRUD functionality, REST API and PostgreSQL data
 - Clear all completed tasks
 - Filter tasks by All, Active, or Completed
 - Persistent task storage with PostgreSQL
+- Centralized frontend API communication and error handling
 
 ## Technologies
 
@@ -29,6 +30,9 @@ A task manager application with CRUD functionality, REST API and PostgreSQL data
 - Express
 - TypeScript
 - PostgreSQL
+- pg
+- CORS
+- dotenv
 
 ## Installation
 
@@ -104,6 +108,7 @@ npm install -D typescript tsx @types/node @types/express @types/cors
 ## Environment Variables
 
 Create a `.env` file inside the backend folder.
+You can use the included `.env.example` file as a template.
 
 Example:
 
@@ -113,10 +118,7 @@ DB_PORT=5432
 DB_USER=postgres
 DB_PASSWORD=your_password
 DB_NAME=task_manager
-PORT=3000
 ```
-
-Use .env.example as a template. It is included in the project.
 
 ## PostgreSQL Database
 
@@ -153,3 +155,28 @@ npm run dev
 ```
 
 The frontend and backend must both be running for the application to work.
+
+## Updates
+
+### Task Manager 1.1
+
+- Added Bootstrap styling
+- Improved UI layout
+- Renamed variables for better readability and consistency
+
+### Task Manager 1.2
+
+- Created `frontend/src/api/tasks.ts`
+- Moved HTTP request logic out of `TaskManager.tsx`
+- Added reusable API functions for:
+  - loading tasks
+  - creating tasks
+  - updating tasks
+  - deleting tasks
+  - clearing completed tasks
+- Replaced direct `fetch` calls in `TaskManager.tsx` with reusable API functions
+- Centralized API error handling with `handleError()`
+- Added `showError()` for displaying and automatically clearing error messages
+- Reduced duplicated error-handling code
+- Improved separation between API logic and React UI/state logic
+- Improved code readability and maintainability
