@@ -19,7 +19,7 @@ The frontend is built with:
 
 Navigate to the frontend folder:
 
-````bash
+```bash
 cd frontend
 
 Install the dependencies:
@@ -108,4 +108,3 @@ cd backend
 npm run dev
 
 The frontend and backend must both be running for the application to work.
-````
